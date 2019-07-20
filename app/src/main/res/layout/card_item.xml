@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/cardViewLayout"
+        android:layout_width="250dp"
+        android:layout_height="154dp"
+        android:padding="0dp"
+        android:background="@android:color/transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/card_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/btn_debitcard"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                />
+
+            <TextView
+                android:id="@+id/card_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card Name"
+                android:textColor="@color/cardview_light_background"
+                android:fontFamily="@font/airbnbcereal_bold"
+                android:textSize="14sp"
+                android:layout_marginTop="17dp"
+                android:layout_marginStart="26dp"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/transaction_history_label"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="18dp"
+                android:paddingBottom="0dp"
+                app:cardCornerRadius="10dp"
+                android:layout_alignStart="@id/card_name">
+
+                <TextView
+                    android:id="@+id/transaction_history"
+                    android:layout_width="138dp"
+                    android:layout_height="25dp"
+                    android:layout_alignStart="@id/card_name"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/airbnbcereal_book"
+                    android:text="Tap to see Transaction History"
+                    android:textColor="@android:color/black"
+                    android:textSize="8sp" />
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/current_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 65.300.000"
+                android:layout_above="@id/transaction_history_label"
+                android:layout_marginBottom="10dp"
+                android:layout_alignStart="@+id/transaction_history_label"
+                android:fontFamily="@font/airbnbcereal_bold"
+                />
+
+            <TextView
+                android:id="@+id/current_balance_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Balance"
+                android:textColor="@android:color/black"
+                android:textSize="8sp"
+                android:layout_alignStart="@+id/current_balance"
+                android:layout_above="@+id/current_balance"
+                android:fontFamily="@font/airbnbcereal_book"
+                />
+
+            <ImageView
+                android:id="@+id/card_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icn_info"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="26dp"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
