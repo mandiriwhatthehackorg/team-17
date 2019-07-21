@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreditCardDetail"
+    android:background="@drawable/img_bghome">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:cardBackgroundColor="#003D79">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="15dp"
+                android:text="Credit Card Details"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/airbnbcereal_medium"
+                android:layout_marginStart="50dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="29dp"
+                android:src="@drawable/icn_back"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/cc_lay"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/card_imageCC"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:src="@drawable/btn_creditcard" />
+
+        <TextView
+            android:id="@+id/card_nameCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit Card"
+            android:textColor="@color/cardview_light_background"
+            android:fontFamily="@font/airbnbcereal_bold"
+            android:textSize="14sp"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="100dp"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/transaction_history_labelCC"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/card_nameCC"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="18dp"
+            android:paddingBottom="0dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/due_date"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_alignStart="@id/card_name"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:paddingBottom="0dp"
+                android:fontFamily="@font/airbnbcereal_book"
+                android:text="8 Agustus 2019"
+                android:textColor="@android:color/black"
+                android:textSize="10sp" />
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/current_balanceCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 17.354.255"
+            android:layout_above="@id/transaction_history_labelCC"
+            android:layout_marginBottom="4dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:layout_alignStart="@+id/transaction_history_labelCC"
+            android:fontFamily="@font/airbnbcereal_bold"
+            />
+
+        <TextView
+            android:id="@+id/current_balance_labelCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Tagihan bulan ini"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:layout_alignStart="@+id/current_balanceCC"
+            android:layout_above="@+id/current_balanceCC"
+            android:fontFamily="@font/airbnbcereal_book"
+            />
+
+        <TextView
+            android:id="@+id/limit_CC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 32.654.754"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_alignStart="@+id/current_balanceCC"
+            android:layout_above="@+id/current_balance_labelCC"
+            android:fontFamily="@font/airbnbcereal_bold"
+            />
+
+        <TextView
+            android:id="@+id/limit_labelCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sisa Limit Anda"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:layout_alignStart="@+id/current_balanceCC"
+            android:layout_above="@+id/limit_CC"
+            android:fontFamily="@font/airbnbcereal_book"
+            />
+
+        <ImageView
+            android:id="@+id/card_infoCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_mastercard"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="100dp"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewnotif"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/cc_lay"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E8E8E8">
+
+            <TextView
+                android:id="@+id/label_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:fontFamily="@font/airbnbcereal_bold"
+                android:text="Tagihan Minimal yang harus dibayarkan bulan ini"
+                android:layout_centerHorizontal="true"/>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 3.554.120"
+                android:fontFamily="@font/airbnbcereal_bold"
+                android:textSize="24sp"
+                android:layout_below="@id/label_x"
+                android:layout_centerHorizontal="true"
+                />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <CheckBox
+        android:id="@+id/notif_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardViewnotif"
+        android:layout_alignStart="@+id/cardViewnotif"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:layout_width="397dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardViewnotif"
+        android:layout_alignEnd="@id/notif_check"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="-417dp"
+        android:text="Enable notification for limit reminder" />
+
+    <TextView
+        android:id="@+id/label_tagih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notif_check"
+        android:text="TAGIHAN BULAN JULI 2019"
+        android:layout_marginTop="10dp"
+        android:textSize="22dp"
+        android:fontFamily="@font/airbnbcereal_bold"
+        android:textColor="#003D79"
+        android:layout_marginStart="15dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/anjir"
+        android:layout_below="@id/label_tagih"
+        android:scaleType="centerCrop"/>
+</RelativeLayout>

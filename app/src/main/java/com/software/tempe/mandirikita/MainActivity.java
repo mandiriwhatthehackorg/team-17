@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView familycard_btn;
 
+    private ImageView cardCCImg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +59,15 @@ public class MainActivity extends AppCompatActivity {
         // testing = findViewById(R.id.test);
 
         familycard_btn = findViewById(R.id.familycard_btn);
+        cardCCImg = findViewById(R.id.card_imageCC);
+
+        cardCCImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CreditCardDetail.class);
+                startActivity(intent);
+            }
+        });
 
         getTokenServicing(app_id);
 
